@@ -31,3 +31,21 @@ Mode                 LastWriteTime         Length Name
 la---   2024/01/03 水曜日     0:43        6070272 nyagos.exe-2079168037
 -a---   2024/01/26 金曜日    15:55        6070272 nyagos.exe
 ```
+
+Download and Install
+--------------------
+
+On the directory where the environment variable PATH specifies.
+( 書き込み可能な、環境変数 PATH が指定するディレクトリにて )
+
+```
+curl -O https://raw.githubusercontent.com/hymkor/Update-Exe-All.ps1/master/Update-Exe-All.ps1
+```
+
+When the scoop-installer is avilable,
+( scoop-installer が使える場合 )
+
+```
+scoop bucket add hymkor https://github.com/hymkor/scoop-bucket
+scoop install Update-Exe-All.ps1
+```
