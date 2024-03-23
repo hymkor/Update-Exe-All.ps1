@@ -1,7 +1,13 @@
-Param ([string] $source)
+Set-PSDebug -Strict
 
-if ( -not $source -or -not (Test-Path $source) ){
+if ( $args.Length -lt 1 ){
     Write-Host "Update-Exe-All.ps1 EXECUTABLE-NAME"
+    Exit 1
+}
+$source = $args[0]
+
+if ( -not (Test-Path $source) ){
+    Write-Host "$source not found"
     Exit 1
 }
 
