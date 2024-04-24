@@ -2,7 +2,7 @@ v0.3.0
 ======
 Apr.25, 2024
 
-+ Add Set-PSDebug -Strict`
++ Add `Set-PSDebug -Strict`
 + Execute for each arguments.
 + When no arguments, execute as `Update-Exe-All *.exe`
 
