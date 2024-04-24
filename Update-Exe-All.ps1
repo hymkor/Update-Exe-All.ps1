@@ -26,11 +26,12 @@ function Update-Exe($source){
 }
 
 if ( $args.Length -lt 1 ){
-    Write-Host "Update-Exe-All.ps1 EXECUTABLE-NAME"
-    Exit 1
+    Get-ChildItem -Path "*.exe" | ForEach-Object {
+        Update-Exe $_
+    }
+    Exit 0
 }
 
 foreach ( $source in $args ){
     Update-Exe $source
 }
-
