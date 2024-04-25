@@ -1,3 +1,6 @@
+* Do not show error even when no files are found to override
+* Support \*.cmd, \*.bat, \*.ps1 files same as \*.exe
+
 v0.3.0
 ======
 Apr.25, 2024
