@@ -8,7 +8,7 @@ function Update-Exe($source){
 
     $name = (Split-Path $source -Leaf)
 
-    Get-Command $name -All | ForEach-Object {
+    Get-Command $name -All -ErrorAction SilentlyContinue | ForEach-Object {
         $target = $_.Source
         $dir = (Split-Path -Parent $target)
         $answer = (Read-Host "Update `"${target}`" ? [y|n]")
