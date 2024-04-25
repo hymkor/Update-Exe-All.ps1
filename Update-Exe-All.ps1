@@ -26,8 +26,11 @@ function Update-Exe($source){
 }
 
 if ( $args.Length -lt 1 ){
-    Get-ChildItem -Path "*.exe" | ForEach-Object {
-        Update-Exe $_
+    Get-ChildItem -Path . | ForEach-Object {
+        if ( $_ -like "*.exe" -or $_ -like "*.ps1" -or 
+             $_ -like "*.cmd" -or $_ -like "*.bat" ){
+            Update-Exe $_
+        }
     }
     Exit 0
 }
